@@ -56,4 +56,6 @@ urlpatterns = [
     path('payment-success', views.payment_success_view,name='payment-success'),
 
 
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
