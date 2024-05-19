@@ -126,8 +126,8 @@ USE_L10N = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 import os
-
-STATIC_URL = '/static/'
+STATIC_DIR=os.path.join(BASE_DIR,'static')
+STATIC_URL = 'ecom_web_app-main/ecom_web_app/static/'
 
 STATICFILES_DIRS = [
     os.environ.get('STATICFILES_DIR', os.path.join(BASE_DIR, 'static')),
